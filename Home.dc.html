@@ -194,16 +194,31 @@ class Component extends DCLogic {
     this.computeRows();
     window.addEventListener('resize', this.computeRows);
     this.hydrateImgs();
-    const v = this.videoRef.current;
-    if (v) {
-      v.muted = true;
-      v.loop = true;
-      v.play().catch(() => {});
-    }
+    this.startVideo();
   }
   componentDidUpdate() {
     this.hydrateImgs();
   }
+  startVideo = () => {
+    const v = this.videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.defaultMuted = true;
+    v.loop = true;
+    v.autoplay = true;
+    v.setAttribute('muted', '');
+    v.setAttribute('loop', '');
+    v.setAttribute('autoplay', '');
+    v.setAttribute('playsinline', '');
+    v.setAttribute('webkit-playsinline', '');
+    const tryPlay = () => { v.play().catch(() => {}); };
+    tryPlay();
+    v.addEventListener('ended', tryPlay);
+    // fallback: some mobile browsers only allow play after first touch
+    const onFirstTouch = () => { tryPlay(); window.removeEventListener('touchstart', onFirstTouch); };
+    window.addEventListener('touchstart', onFirstTouch, { passive: true });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
+  };
   componentWillUnmount() {
     window.removeEventListener('resize', this.computeRows);
   }
