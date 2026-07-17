@@ -10,55 +10,55 @@
 <helmet data-dc-atomics>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
-  body{margin:0;background:#fcfbf9;font-family:'EB Garamond',Georgia,serif;color:#141414}
+  body{margin:0;background:#fbfcfd;font-family:'Spectral',Georgia,serif;color:#141414}
   a{color:#141414;text-decoration:none}
   a:hover{color:#000}
   img{display:block;max-width:100%}
+
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+[style*="padding:0 60px 100px"]{padding-left:16px!important;padding-right:16px!important}
+h1{font-size:clamp(30px,8vw,44px)!important;line-height:1.07!important}
+[style*="gap:30px"]{flex-wrap:wrap!important;gap:14px!important}
+[data-screen-label] img{background-position:center!important}
+}
 </style>
 </helmet>
 
-<div data-screen-label="Railway Underground — project page" style="max-width:900px;margin:0 auto;padding:0 40px 100px">
+<div data-screen-label="Railway Underground — project page" ref="{{ rootRef }}" style="padding:0 60px 100px">
 
   <div style="display:flex;justify-content:space-between;align-items:center;padding:30px 0 26px;border-bottom:1px solid rgba(20,20,20,.13)">
     <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">← Index</a>
-    <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">08 / 10</div>
+    <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">07 / 10</div>
   </div>
 
   <div style="padding:56px 0 30px">
     <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:16px">Urban Research</div>
-    <h1 style="margin:0;font:400 52px/1.08 'EB Garamond',Georgia,serif;letter-spacing:-.015em">Railway Underground</h1>
-    <div style="display:flex;gap:30px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(20,20,20,.13);font:400 15px/1.5 'EB Garamond',Georgia,serif;color:#333">
+    <h1 style="margin:0;font:400 52px/1.08 'Spectral',Georgia,serif;letter-spacing:-.015em">Railway Underground</h1>
+    <div style="display:flex;gap:30px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(20,20,20,.13);font:400 15px/1.5 'Spectral',Georgia,serif;color:#333">
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Site</span>Tainan Railway Corridor</div>
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Year</span>2023</div>
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Role</span>Research &amp; design study</div>
     </div>
   </div>
 
-  <img src="proj/railway/1.png" alt="Railway Underground hero — 3 floor plan" style="width:100%;height:480px;object-fit:cover">
+  <img src="proj/railway/1.png" alt="Railway Underground hero — 3 floor plan" style="width:100%;height:auto;display:block;background:#fff">
 
   <div style="padding:56px 0 10px">
     <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px">
       <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Concept</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — the opportunity opened up by putting the railway underground.</p>
-    </div>
-    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px;margin-top:34px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Design Development</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — the new floor plans and how the reclaimed corridor is programmed.</p>
-    </div>
-    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px;margin-top:34px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Outcome</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — the research findings and urban design implications.</p>
+      <p style="margin:0;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">The site is Fu-Xing Market, located within the area of the Tainan railway undergrounding project and situated to the southwest of the Dong-Men Roundabout. It is the first culinary district that tourists arrive in Tainan by train encounter. The design concept transforms the market into an open public space: the ground floor houses a fresh-food market and food stalls, while the upper floors provide space for community residents' activities, creating spatial functions that meet the needs of both residents and visiting tourists. In coordination with the ground-level landscape redesign that follows Tainan's railway undergrounding, the north–south railway green-belt park at ground level extends its greenery into the market, injecting a new sense of public space and innovative possibilities into the ancient capital of Tainan.</p>
     </div>
   </div>
 
   <div style="padding-top:56px">
     <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:20px">Full Gallery — {{ total }} images · click to enlarge</div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
-      <sc-for list="{{ images }}" as="photo" hint-placeholder-count="6">
-        <img src="{{ photo.src }}" alt="{{ photo.alt }}" data-index="{{ $index }}" onClick="{{ openAt }}" style="width:100%;height:300px;object-fit:cover;cursor:zoom-in;background:#eee">
+    <div ref="{{ galleryRef }}" style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ items }}" as="photo" hint-placeholder-count="9">
+        <img data-src="{{ photo.src }}" alt="{{ photo.alt }}" data-index="{{ photo.idx }}" onClick="{{ openAt }}" style="height:{{ photo.height }}px;width:{{ photo.width }}px;object-fit:cover;cursor:zoom-in;background:{{ photo.bg }}">
       </sc-for>
     </div>
   </div>
@@ -67,35 +67,73 @@
     <div onClick="{{ close }}" onTouchStart="{{ onTouchStart }}" onTouchEnd="{{ onTouchEnd }}" style="position:fixed;inset:0;background:rgba(10,10,10,.95);z-index:999;display:flex;align-items:center;justify-content:center">
       <button onClick="{{ close }}" style="position:absolute;top:22px;right:26px;background:none;border:none;color:#fff;font:300 30px/1 'Helvetica Neue',Arial,sans-serif;cursor:pointer">✕</button>
       <button onClick="{{ prev }}" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font:300 48px/1 Georgia,serif;cursor:pointer;padding:10px">‹</button>
-      <img src="{{ currentSrc }}" alt="{{ currentAlt }}" onClick="{{ stop }}" style="max-width:86vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+      <img data-src="{{ currentSrc }}" alt="{{ currentAlt }}" onClick="{{ stop }}" style="max-width:86vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5);background:{{ currentBg }}">
       <button onClick="{{ next }}" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font:300 48px/1 Georgia,serif;cursor:pointer;padding:10px">›</button>
       <div style="position:absolute;bottom:26px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font:400 12px 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.08em">{{ counter }}</div>
     </div>
   </sc-if>
 
   <div style="display:flex;justify-content:space-between;align-items:center;padding:56px 0 0;margin-top:56px;border-top:1px solid rgba(20,20,20,.13)">
-    <a href="Muse.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">← 07 · Muse</a>
+    <a href="Membrane.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">← 06 · Membrane</a>
     <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase">Index</a>
-    <a href="Hexa Kura.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">09 · Hexa Kura →</a>
+    <a href="Hexa Kura.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">08 · Hexa Kura →</a>
   </div>
 
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+function justifyRows(images, containerWidth, targetHeight, gap) {
+  if (!containerWidth || !images || !images.length) return [];
+  const out = [];
+  let row = [];
+  let rowAr = 0;
+  const flush = (height) => { row.forEach(it => out.push({ ...it, width: Math.floor(it.ar * height), height })); };
+  images.forEach((img, idx) => {
+    const ar = (img.w && img.h) ? img.w / img.h : 1.5;
+    row.push({ ...img, idx, ar });
+    rowAr += ar;
+    const widthAtTarget = rowAr * targetHeight + (row.length - 1) * gap;
+    if (widthAtTarget >= containerWidth) {
+      flush((containerWidth - (row.length - 1) * gap) / rowAr);
+      row = []; rowAr = 0;
+    }
+  });
+  if (row.length) {
+    flush((containerWidth - (row.length - 1) * gap) / rowAr);
+  }
+  return out;
+}
 class Component extends DCLogic {
   images = [
-    {src:'proj/railway/1.png', alt:'Railway Underground — 1'},
-    {src:'proj/railway/2.png', alt:'Railway Underground — 2'},
-    {src:'proj/railway/3.png', alt:'Railway Underground — 3'},
-    {src:'proj/railway/4.png', alt:'Railway Underground — 4'},
-    {src:'proj/railway/5.png', alt:'Railway Underground — 5'},
-    {src:'proj/railway/6.png', alt:'Railway Underground — 6'},
-    {src:'proj/railway/7.png', alt:'Railway Underground — 7'},
-    {src:'proj/railway/8.png', alt:'Railway Underground — 8'},
-    {src:'proj/railway/9.png', alt:'Railway Underground — 9'}
+    {src:'proj/railway/1.png', alt:'Railway Underground — 1', w:2475, h:2475},
+    {src:'proj/railway/2.png', alt:'Railway Underground — 2', w:11811, h:11811},
+    {src:'proj/railway/3.png', alt:'Railway Underground — 3', w:11811, h:11811},
+    {src:'proj/railway/4.png', alt:'Railway Underground — 4', w:11811, h:11811},
+    {src:'proj/railway/5.png', alt:'Railway Underground — 5', w:2475, h:2475},
+    {src:'proj/railway/6.png', alt:'Railway Underground — 6', w:2475, h:2475},
+    {src:'proj/railway/7.png', alt:'Railway Underground — 7', w:2475, h:2475},
+    {src:'proj/railway/8.png', alt:'Railway Underground — 8', w:2475, h:2475},
+    {src:'proj/railway/9.png', alt:'Railway Underground — 9', w:2475, h:2475}
   ];
-  state = { open: false, index: 0 };
+  state = { open: false, index: 0, items: justifyRows(this.images.map(p => ({ ...p, bg: p.src.endsWith('.png') ? '#fff' : '#eee' })), (typeof window !== 'undefined' ? window.innerWidth : 1600) - 120, 300, 8) };
   touchX = null;
+  galleryRef = React.createRef();
+  rootRef = React.createRef();
+  hydrateImgs = () => {
+    const root = this.rootRef.current;
+    if (!root) return;
+    root.querySelectorAll('img[data-src]').forEach(img => {
+      const want = img.getAttribute('data-src');
+      if (want && img.getAttribute('src') !== want) img.setAttribute('src', want);
+    });
+  };
+  computeRows = () => {
+    if (!this.galleryRef.current) return;
+    const width = this.galleryRef.current.clientWidth;
+    const withBg = this.images.map(p => ({ ...p, bg: p.src.endsWith('.png') ? '#fff' : '#eee' }));
+    const items = justifyRows(withBg, width, 300, 8);
+    this.setState({ items });
+  };
   openAt = (e) => { this.setState({ open: true, index: parseInt(e.currentTarget.dataset.index, 10) }); };
   close = () => this.setState({ open: false });
   stop = (e) => e.stopPropagation();
@@ -114,16 +152,27 @@ class Component extends DCLogic {
     if (dx > 50) this.prev(); else if (dx < -50) this.next();
     this.touchX = null;
   };
-  componentDidMount() { window.addEventListener('keydown', this.handleKey); }
-  componentWillUnmount() { window.removeEventListener('keydown', this.handleKey); }
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleKey);
+    this.computeRows();
+    window.addEventListener('resize', this.computeRows);
+    this.hydrateImgs();
+  }
+  componentDidUpdate() {
+    this.hydrateImgs();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKey);
+    window.removeEventListener('resize', this.computeRows);
+  }
   renderVals() {
     const total = this.images.length;
     const cur = this.images[this.state.index] || this.images[0];
     return {
-      images: this.images, total, open: this.state.open,
+      items: this.state.items, galleryRef: this.galleryRef, rootRef: this.rootRef, total, open: this.state.open,
       openAt: this.openAt, close: this.close, stop: this.stop, next: this.next, prev: this.prev,
       onTouchStart: this.onTouchStart, onTouchEnd: this.onTouchEnd,
-      currentSrc: cur.src, currentAlt: cur.alt,
+      currentSrc: cur.src, currentAlt: cur.alt, currentBg: cur.src.endsWith('.png') ? '#fff' : '#eee',
       counter: (this.state.index + 1) + ' / ' + total
     };
   }

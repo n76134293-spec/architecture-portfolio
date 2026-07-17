@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;font-family:'Spectral',Georgia,serif;color:#141414}
+  a{color:#141414;text-decoration:none}
+  a:hover{color:#000}
+  img,video{display:block;max-width:100%}
+
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+[style*="padding:56px 60px"]{padding-left:16px!important;padding-right:16px!important}
+[style*="padding:0 60px 64px"]{padding-left:16px!important;padding-right:16px!important}
+[style*="padding:30px 60px"]{padding-left:16px!important;padding-right:16px!important}
+[style*="padding:26px 60px"]{padding-left:16px!important;padding-right:16px!important;flex-direction:column!important;gap:6px!important}
+[style*="grid-template-columns:120px 1fr"]{grid-template-columns:1fr!important;gap:4px!important}
+}
+</style>
+</helmet>
+
+<div data-screen-label="Research" ref="{{ rootRef }}">
+
+  <div style="position:relative;width:100%;background:#000">
+    <video ref="{{ videoRef }}" src="proj/research/pointcloud.mp4" autoplay="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsinline="{{ true }}" style="width:100%;height:auto;display:block"></video>
+    <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:30px 60px;z-index:2">
+      <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75)">← Index</a>
+      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75)">Research</div>
+    </div>
+  </div>
+
+  <div style="padding:56px 60px 44px">
+    <div style="font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:14px">Intro</div>
+    <p style="margin:0;max-width:none;font:400 18px/1.7 'Spectral',Georgia,serif;color:#2b2b2b">Graduated from the Building and Climate Lab (BCLab), Graduate Department of Architecture, National Cheng Kung University. My research spans urban environmental analysis, LiDAR point cloud processing, spatial modeling, and thermal environment simulation. I am committed to integrating interdisciplinary approaches across architecture, spatial information, and environmental science to investigate the effects of urban trees on microclimate and human thermal comfort.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <img src="proj/research/CFD.png" alt="CFD simulation" style="width:100%;height:auto;display:block;background:#fff">
+    <img src="proj/research/LST_Landsat9_Tainan_20240702.jpg" alt="Land surface temperature, Landsat 9, Tainan" style="width:100%;height:auto;display:block">
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;background:#fff">
+      <img src="proj/research/SHADE.gif" alt="Tree shading simulation" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block">
+    </div>
+    <img src="proj/research/solar-radiation.png" alt="Solar radiation simulation" style="width:100%;height:auto;display:block;background:#fff">
+    <img src="proj/research/wireless-thermal-camera.png" alt="Wireless thermal camera network" style="width:100%;height:auto;display:block;background:#fff">
+  </div>
+
+  <div style="padding:56px 60px;border-top:1px solid rgba(20,20,20,.13);display:flex;justify-content:center">
+    <div style="width:100%;max-width:900px">
+    <div style="font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:22px">Publications</div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:20px">
+        <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.45)">2026.03</div>
+        <div style="font:400 16.5px/1.6 'Spectral',Georgia,serif">Airborne LiDAR-derived Laser Penetration Index as an Urban-Scale Proxy to Evaluate Thermal Comfort Under Urban Tree Cluster Shading — <em>Journal article under review</em></div>
+      </div>
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:20px">
+        <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.45)">2026.01</div>
+        <div style="font:400 16.5px/1.6 'Spectral',Georgia,serif">12th Conference on Urban Planning and Spatial Information — Lee, S.-Y., Wang, C.-K., Lee, C.-C., &amp; Lin, T.-P. (2026). Simulating urban tree thermal comfort under varying canopy coverage using terrestrial LiDAR-derived 3D models. In <em>Proceedings of the Third International Conference on Future Challenges in Sustainable Urban Planning &amp; Territorial Management (SUPTM 2026)</em>. Universidad Politécnica de Cartagena. <a href="http://hdl.handle.net/10317/23809" style="border-bottom:1px solid rgba(20,20,20,.3)">hdl.handle.net/10317/23809</a></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div style="padding:0 60px 64px;display:flex;justify-content:center">
+    <div style="width:100%;max-width:900px">
+    <div style="font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:22px">Projects</div>
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="10">
+      <div style="display:grid;grid-template-columns:120px 1fr;gap:20px;margin-bottom:22px">
+        <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.45)">{{ p.date }}</div>
+        <div>
+          <div style="font:400 17px/1.4 'Spectral',Georgia,serif;margin-bottom:4px">{{ p.title }}</div>
+          <div style="font:italic 400 15px/1.5 'Spectral',Georgia,serif;color:rgba(20,20,20,.6)">{{ p.role }}</div>
+        </div>
+      </div>
+    </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;padding:26px 60px;border-top:1px solid rgba(20,20,20,.13);font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">
+    <span>Sunny Lee — Architecture Portfolio</span><span>© 2026</span>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  projects = [
+    { date:'2026.03 – now', title:'Urban Forest Project: Planting Trees for Cooling from a Climate Adaptation Perspective, Climate Change Administration, Ministry of Environment', role:'Project Assistant — Assisted in evaluating the quality of urban tree shading across Taiwan and promoted the benefits of green spaces and tree planting for urban cooling' },
+    { date:'2026.03 – now', title:'Urban Heat and Shading Vision Film, MVRDV & BCLab', role:'Project Assistant — Supported future environmental planning and compiled data on the distribution of urban tree shading' },
+    { date:'2025.08', title:'Preliminary Land Development Planning for Pier-2 Art District, Kaohsiung, Polisano, Leventhal, and Pilbrow Architecture (PLP)', role:'Research Assistant — Assisted in environmental analysis and shading distribution around building development sites' },
+    { date:'2026.01', title:'Mt. Benye Giant Tree TLS Scanning Survey, NCKU Mountaineering Association — Supported by the "Taiwan Champion Tree"', role:'Project Director — Lead for TLS data acquisition and directed field patrols and environmental monitoring' },
+    { date:'2025.08 – now', title:'Strategies for Pruning Old Trees in Urban and Rural Areas and Maintaining Thermal Comfort in Surrounding Environments — Supported by the "Taiwan Champion Tree"', role:'Research Assistant — Investigating heat adaptation strategies through tree pruning and shading & solar radiation simulation' },
+    { date:'2024.09 – now', title:'Climate-Resilient Development and Disaster Adaptation Governance: A Participatory Approach for a Just Transition', role:'Project Assistant — Responsible for developing green cooling strategies and shading improvement plans in Changhua and Yunlin, Taiwan. Engages local communities through participatory workshops and thermal walks to co-develop locally appropriate heat mitigation and climate adaptation strategies.' },
+    { date:'2025.09 – now', title:'Urban Carbon Emission Capacity: Land-Use Strategies Based on Carbon Neutrality and Emissions Cap Regulation', role:'Research Assistant — Estimating the carbon storage of urban trees in Tainan, Taiwan using terrestrial LiDAR' },
+    { date:'2024.06 – 2025.08', title:'Taiwan Climate Change Projection Information Platform', role:'Research Assistant — Collection and review of domestic and international heat adaptation strategies' },
+    { date:'2024.08 – 2025.08', title:'Digital Cooling Platform and Policy Based on Cross-Scale Assessment of Urban Heat Impacts of Adaptive Behaviors', role:'Research Assistant — Research on urban climate adaptation strategies through green shading and cooling' },
+    { date:'2024.02 – 06', title:'Course Design of "Architectural Professional Practice" Aimed at Building a Multi-Party Shared Knowledge Platform', role:'Research Assistant — Research on year four "Architectural Professional Practice" internship platform' }
+  ];
+  rootRef = React.createRef();
+  videoRef = React.createRef();
+  componentDidMount() {
+    const v = this.videoRef.current;
+    if (v) {
+      v.muted = true;
+      v.loop = true;
+      v.play().catch(() => {});
+    }
+  }
+  renderVals() {
+    return { projects: this.projects, rootRef: this.rootRef, videoRef: this.videoRef };
+  }
+}
+
+</script>
+</body>
+</html>

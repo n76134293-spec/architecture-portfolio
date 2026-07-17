@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;font-family:'Spectral',Georgia,serif;color:#141414}
+  a{color:#141414;text-decoration:none}
+  a:hover{color:#000}
+  img{display:block;max-width:100%}
+
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+[style*="padding:30px 60px"]{padding-left:16px!important;padding-right:16px!important}
+}
+</style>
+</helmet>
+
+<div data-screen-label="More — additional work" ref="{{ rootRef }}">
+
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:30px 60px;border-bottom:1px solid rgba(20,20,20,.13)">
+    <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">← Index</a>
+    <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">More Work</div>
+  </div>
+
+  <sc-for list="{{ images }}" as="photo" hint-placeholder-count="4">
+    <img data-src="{{ photo.src }}" alt="{{ photo.alt }}" width="{{ photo.w }}" height="{{ photo.h }}" style="width:100%;height:auto;display:block">
+  </sc-for>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  images = [
+    {src:'proj/more/1.jpg', alt:'More — 1', w:3509, h:2481},
+    {src:'proj/more/2.jpg', alt:'More — 2', w:3508, h:2481},
+    {src:'proj/more/y1s1-1.jpg', alt:'More — first year, semester 1', w:3509, h:2481},
+    {src:'proj/more/y1s2-1.jpg', alt:'More — first year, semester 2', w:3508, h:2482},
+    {src:'proj/more/y1s2-2.jpg', alt:'More — first year, semester 2', w:3509, h:2482},
+    {src:'proj/more/y2s1-1.jpg', alt:'More — second year, semester 1', w:3508, h:2481},
+    {src:'proj/more/y2s1-2.jpg', alt:'More — second year, semester 1', w:3509, h:2481},
+    {src:'proj/more/y2s1-3.jpg', alt:'More — second year, semester 1', w:3509, h:2481},
+    {src:'proj/more/y3s2-1.jpg', alt:'More — third year, semester 2', w:4677, h:3118},
+    {src:'proj/more/y3s2-2.jpg', alt:'More — third year, semester 2', w:4677, h:3118},
+    {src:'proj/more/broadway.jpg', alt:'More — Broadway', w:4677, h:4569}
+  ];
+  rootRef = React.createRef();
+  hydrateImgs = () => {
+    const root = this.rootRef.current;
+    if (!root) return;
+    root.querySelectorAll('img[data-src]').forEach(img => {
+      const want = img.getAttribute('data-src');
+      if (want && img.getAttribute('src') !== want) img.setAttribute('src', want);
+    });
+  };
+  componentDidMount() { this.hydrateImgs(); }
+  componentDidUpdate() { this.hydrateImgs(); }
+  renderVals() {
+    return { images: this.images, rootRef: this.rootRef };
+  }
+}
+
+</script>
+</body>
+</html>

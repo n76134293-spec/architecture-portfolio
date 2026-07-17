@@ -7,20 +7,28 @@
 </head>
 <body>
 <x-dc>
-<helmet data-dc-atomics>
+<helmet data-dc-atomics="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
-  body{margin:0;background:#fcfbf9;font-family:'EB Garamond',Georgia,serif;color:#141414}
+  body{margin:0;background:#fbfcfd;font-family:'Spectral',Georgia,serif;color:#141414}
   a{color:#141414;text-decoration:none}
   a:hover{color:#000}
   img{display:block;max-width:100%}
+
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+[style*="padding:0 60px 100px"]{padding-left:16px!important;padding-right:16px!important}
+h1{font-size:clamp(30px,8vw,44px)!important;line-height:1.07!important}
+[style*="gap:30px"]{flex-wrap:wrap!important;gap:14px!important}
+[data-screen-label] img{background-position:center!important}
+}
 </style>
 </helmet>
 
-<div data-screen-label="Fu Cheng — project page" style="max-width:900px;margin:0 auto;padding:0 40px 100px">
+<div data-screen-label="Fu Cheng — project page" ref="{{ rootRef }}" style="padding:0 60px 100px">
 
   <div style="display:flex;justify-content:space-between;align-items:center;padding:30px 0 26px;border-bottom:1px solid rgba(20,20,20,.13)">
     <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">← Index</a>
@@ -29,36 +37,30 @@
 
   <div style="padding:56px 0 30px">
     <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:16px">Urban Design — Public Realm</div>
-    <h1 style="margin:0;font:400 68px/1.02 'EB Garamond',Georgia,serif;letter-spacing:-.015em">Fu Cheng</h1>
-    <div style="display:flex;gap:30px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(20,20,20,.13);font:400 15px/1.5 'EB Garamond',Georgia,serif;color:#333">
+    <h1 style="margin:0;font:400 68px/1.02 'Spectral',Georgia,serif;letter-spacing:-.015em">Fu Cheng</h1>
+    <div style="display:flex;gap:30px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(20,20,20,.13);font:400 15px/1.5 'Spectral',Georgia,serif;color:#333">
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Site</span>Zhongzheng Rd &amp; the Canal, Tainan</div>
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Year</span>2023–2024</div>
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Role</span>Individual studio project</div>
     </div>
   </div>
 
-  <img src="proj/fucheng/2.jpg" alt="Fu Cheng aerial view" style="width:100%;height:480px;object-fit:cover">
+  <img src="proj/fucheng/2.jpg" alt="Fu Cheng aerial view" style="width:100%;height:auto;display:block">
 
   <div style="padding:56px 0 10px">
     <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Concept</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — the idea, the site problem, and what the project responds to.</p>
-    </div>
-    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px;margin-top:34px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Design Development</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — how the design evolved, key decisions, the section and the water-treatment programme.</p>
-    </div>
-    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px;margin-top:34px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Outcome</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — what the finished proposal achieves, day and night.</p>
+      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:14px">Concept</div>
+      <p style="margin:0 0 20px;font:italic 400 16px/1.6 'Spectral',Georgia,serif;color:rgba(20,20,20,.55)">"府" refers to the ancient name of Tainan. "埕" refers to a traditional Taiwanese family courtyard — a place where children play and adults farm, and where both formal and informal activities can unfold.</p>
+      <p style="margin:0 0 20px;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">This project introduces the idea of a resilient city by transforming key public spaces into urban water retention grounds. Below ground, a demonstrative urban reservoir would help address Tainan's recurring annual water shortages. During droughts, it could serve as an emergency water source for the public, while in normal times it remains self-sufficient. Open to the public, the facility also invites people to learn about water resource use, serving an educational purpose.</p>
+      <p style="margin:0;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">At ground level, a range of everyday functions would be reintroduced to the site. These include government offices for civic affairs, commercial uses, and tourism-related activities. Together, they respond to the scale of local street life and return public space to its citizens. As an urban water reservoir, the facility helps promote sustainable value, revitalize local industry, and become part of the "lifeblood" of Tainan.</p>
     </div>
   </div>
 
   <div style="padding-top:56px">
     <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:20px">Full Gallery — {{ total }} images · click to enlarge</div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
-      <sc-for list="{{ images }}" as="photo" hint-placeholder-count="8">
-        <img src="{{ photo.src }}" alt="{{ photo.alt }}" data-index="{{ $index }}" onClick="{{ openAt }}" style="width:100%;height:300px;object-fit:cover;cursor:zoom-in;background:#eee">
+    <div ref="{{ galleryRef }}" style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ items }}" as="photo" hint-placeholder-count="9">
+        <img data-src="{{ photo.src }}" alt="{{ photo.alt }}" data-index="{{ photo.idx }}" onClick="{{ openAt }}" style="height:{{ photo.height }}px;width:{{ photo.width }}px;object-fit:cover;cursor:zoom-in;background:{{ photo.bg }}">
       </sc-for>
     </div>
   </div>
@@ -67,40 +69,78 @@
     <div onClick="{{ close }}" onTouchStart="{{ onTouchStart }}" onTouchEnd="{{ onTouchEnd }}" style="position:fixed;inset:0;background:rgba(10,10,10,.95);z-index:999;display:flex;align-items:center;justify-content:center">
       <button onClick="{{ close }}" style="position:absolute;top:22px;right:26px;background:none;border:none;color:#fff;font:300 30px/1 'Helvetica Neue',Arial,sans-serif;cursor:pointer">✕</button>
       <button onClick="{{ prev }}" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font:300 48px/1 Georgia,serif;cursor:pointer;padding:10px">‹</button>
-      <img src="{{ currentSrc }}" alt="{{ currentAlt }}" onClick="{{ stop }}" style="max-width:86vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+      <img data-src="{{ currentSrc }}" alt="{{ currentAlt }}" onClick="{{ stop }}" style="max-width:86vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5);background:{{ currentBg }}">
       <button onClick="{{ next }}" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font:300 48px/1 Georgia,serif;cursor:pointer;padding:10px">›</button>
       <div style="position:absolute;bottom:26px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font:400 12px 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.08em">{{ counter }}</div>
     </div>
   </sc-if>
 
   <div style="display:flex;justify-content:space-between;align-items:center;padding:56px 0 0;margin-top:56px;border-top:1px solid rgba(20,20,20,.13)">
-    <a href="Overture.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">← 10 · Overture</a>
+    <a href="Climate Justice.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">← 10 · Climate Justice</a>
     <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase">Index</a>
-    <a href="Nonsaturated Democracy.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">02 · Nonsaturated Democracy →</a>
+    <a href="Democratize.exe.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">02 · Democratize.exe →</a>
   </div>
 
 </div>
-</x-dc>
+<div style="font-size: 16px; line-height: 1; font-family: 'EB Garamond', Georgia, serif; position: absolute; left: 107px; top: 4px">Your text here</div></x-dc>
 <script type="text/x-dc" data-dc-script>
+function justifyRows(images, containerWidth, targetHeight, gap) {
+  if (!containerWidth || !images || !images.length) return [];
+  const out = [];
+  let row = [];
+  let rowAr = 0;
+  const flush = (height) => { row.forEach(it => out.push({ ...it, width: Math.floor(it.ar * height), height })); };
+  images.forEach((img, idx) => {
+    const ar = (img.w && img.h) ? img.w / img.h : 1.5;
+    row.push({ ...img, idx, ar });
+    rowAr += ar;
+    const widthAtTarget = rowAr * targetHeight + (row.length - 1) * gap;
+    if (widthAtTarget >= containerWidth) {
+      flush((containerWidth - (row.length - 1) * gap) / rowAr);
+      row = []; rowAr = 0;
+    }
+  });
+  if (row.length) {
+    flush((containerWidth - (row.length - 1) * gap) / rowAr);
+  }
+  return out;
+}
 class Component extends DCLogic {
   images = [
-    {src:'proj/fucheng/2.jpg', alt:'Fu Cheng — aerial'},
-    {src:'proj/fucheng/4.jpg', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/6.jpg', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/8.jpg', alt:'Fu Cheng — render'},
-    {src:'proj/fucheng/9.jpg', alt:'Fu Cheng — section'},
-    {src:'proj/fucheng/12.jpg', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/14.jpg', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/15.png', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/16.png', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/17.png', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/18.png', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/19.jpg', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/23.png', alt:'Fu Cheng — drawing'},
-    {src:'proj/fucheng/24.png', alt:'Fu Cheng — drawing'}
+    {src:'proj/fucheng/2.jpg', alt:'Fu Cheng — aerial', w:7680, h:5258},
+    {src:'proj/fucheng/4.jpg', alt:'Fu Cheng — drawing', w:7680, h:5258},
+    {src:'proj/fucheng/6.jpg', alt:'Fu Cheng — drawing', w:3508, h:4967},
+    {src:'proj/fucheng/8.jpg', alt:'Fu Cheng — render', w:7057, h:1477},
+    {src:'proj/fucheng/9.jpg', alt:'Fu Cheng — section', w:7087, h:2983},
+    {src:'proj/fucheng/12.jpg', alt:'Fu Cheng — drawing', w:5760, h:3943},
+    {src:'proj/fucheng/14.jpg', alt:'Fu Cheng — drawing', w:3676, h:2547},
+    {src:'proj/fucheng/15.png', alt:'Fu Cheng — drawing', w:3307, h:4678},
+    {src:'proj/fucheng/16.png', alt:'Fu Cheng — drawing', w:10735, h:2815},
+    {src:'proj/fucheng/17.png', alt:'Fu Cheng — drawing', w:9764, h:3937},
+    {src:'proj/fucheng/18.png', alt:'Fu Cheng — drawing', w:11701, h:3179},
+    {src:'proj/fucheng/19.jpg', alt:'Fu Cheng — drawing', w:14998, h:2917},
+    {src:'proj/fucheng/23.png', alt:'Fu Cheng — drawing', w:14184, h:3147},
+    {src:'proj/fucheng/24.png', alt:'Fu Cheng — drawing', w:14184, h:2335}
   ];
-  state = { open: false, index: 0 };
+  state = { open: false, index: 0, items: justifyRows(this.images.map(p => ({ ...p, bg: p.src.endsWith('.png') ? '#fff' : '#eee' })), (typeof window !== 'undefined' ? window.innerWidth : 1600) - 120, 300, 8) };
   touchX = null;
+  galleryRef = React.createRef();
+  rootRef = React.createRef();
+  hydrateImgs = () => {
+    const root = this.rootRef.current;
+    if (!root) return;
+    root.querySelectorAll('img[data-src]').forEach(img => {
+      const want = img.getAttribute('data-src');
+      if (want && img.getAttribute('src') !== want) img.setAttribute('src', want);
+    });
+  };
+  computeRows = () => {
+    if (!this.galleryRef.current) return;
+    const width = this.galleryRef.current.clientWidth;
+    const withBg = this.images.map(p => ({ ...p, bg: p.src.endsWith('.png') ? '#fff' : '#eee' }));
+    const items = justifyRows(withBg, width, 300, 8);
+    this.setState({ items });
+  };
   openAt = (e) => { this.setState({ open: true, index: parseInt(e.currentTarget.dataset.index, 10) }); };
   close = () => this.setState({ open: false });
   stop = (e) => e.stopPropagation();
@@ -119,16 +159,27 @@ class Component extends DCLogic {
     if (dx > 50) this.prev(); else if (dx < -50) this.next();
     this.touchX = null;
   };
-  componentDidMount() { window.addEventListener('keydown', this.handleKey); }
-  componentWillUnmount() { window.removeEventListener('keydown', this.handleKey); }
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleKey);
+    this.computeRows();
+    window.addEventListener('resize', this.computeRows);
+    this.hydrateImgs();
+  }
+  componentDidUpdate() {
+    this.hydrateImgs();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKey);
+    window.removeEventListener('resize', this.computeRows);
+  }
   renderVals() {
     const total = this.images.length;
     const cur = this.images[this.state.index] || this.images[0];
     return {
-      images: this.images, total, open: this.state.open,
+      items: this.state.items, galleryRef: this.galleryRef, rootRef: this.rootRef, total, open: this.state.open,
       openAt: this.openAt, close: this.close, stop: this.stop, next: this.next, prev: this.prev,
       onTouchStart: this.onTouchStart, onTouchEnd: this.onTouchEnd,
-      currentSrc: cur.src, currentAlt: cur.alt,
+      currentSrc: cur.src, currentAlt: cur.alt, currentBg: cur.src.endsWith('.png') ? '#fff' : '#eee',
       counter: (this.state.index + 1) + ' / ' + total
     };
   }

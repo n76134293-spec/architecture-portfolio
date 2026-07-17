@@ -7,30 +7,58 @@
 </head>
 <body>
 <x-dc>
-<helmet data-dc-atomics>
+
+<helmet data-dc-atomics="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
 <style>
   *{box-sizing:border-box}
-  body{margin:0;background:#efece6;font-family:'EB Garamond',Georgia,serif}
+  body{margin:0;background:#e8ebee;font-family:'Spectral',Georgia,serif}
   a{color:inherit;text-decoration:none}
   a:hover{color:#000}
   img{display:block;max-width:100%}
+
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+[style*="padding:38px 60px 26px"]{padding-left:16px!important;padding-right:16px!important;flex-direction:column!important;align-items:flex-start!important;gap:12px!important}
+[style*="padding:38px 60px 26px"]>div:last-child{width:100%!important;flex-wrap:wrap!important;gap:12px 18px!important}
+[style*="padding:44px 60px"]{padding-left:16px!important;padding-right:16px!important}
+#work{padding-left:16px!important;padding-right:16px!important}
+#about{padding-left:16px!important;padding-right:16px!important;grid-template-columns:1fr!important;row-gap:18px!important}
+[style*="padding:14px 60px 56px"]{padding-left:16px!important;padding-right:16px!important}
+[style*="padding:26px 60px"]{padding-left:16px!important;padding-right:16px!important;flex-direction:column!important;gap:6px!important}
+[style*="grid-template-columns:150px 1fr"]{grid-template-columns:1fr!important;gap:4px!important}
+h1{font-size:clamp(34px,9vw,48px)!important;line-height:1.05!important}
+[style*="gap:30px"]{flex-wrap:wrap!important;gap:16px!important}
+}
 </style>
 </helmet>
 
-<div data-screen-label="Home" style="background:#fff;color:#141414;max-width:1180px;margin:0 auto">
+<div data-screen-label="Home" ref="{{ rootRef }}" style="background:#fff;color:#141414;width:100%">
 
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:38px 60px 26px;border-bottom:1px solid rgba(20,20,20,.13)">
-    <div>
-      <div style="font:500 25px/1 'EB Garamond',Georgia,serif;letter-spacing:.01em">Sunny Lee</div>
-      <div style="margin-top:7px;font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">Architecture Landscape</div>
+  <div style="position:relative;width:100%;height:100vh;background:#000;overflow:hidden">
+    <video ref="{{ videoRef }}" src="proj/homepage-video.mp4" autoplay="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsinline="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.4);transform-origin:center;display:block"></video>
+    <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-end;padding:38px 60px 26px;z-index:2">
+      <div>
+        <div style="font:500 25px/1 'Spectral',Georgia,serif;letter-spacing:.01em;color:#fff">Sunny Lee</div>
+        <div style="margin-top:7px;font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75)">Architecture Landscape</div>
+      </div>
+      <div style="display:flex;gap:30px;font:600 10.5px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase">
+        <a href="#work" style="color:#fff">Project</a>
+        <a href="Research.dc.html" style="color:rgba(255,255,255,.75)">Research</a>
+        <a href="#about" style="color:rgba(255,255,255,.75)">About</a>
+        <a href="#about" style="color:rgba(255,255,255,.75)">Contact</a>
+      </div>
     </div>
-    <div style="display:flex;gap:30px;font:600 10.5px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase">
-      <a href="#work" style="color:#141414">Work</a>
-      <a href="#about" style="color:rgba(20,20,20,.5)">About</a>
-      <a href="#about" style="color:rgba(20,20,20,.5)">Contact</a>
+  </div>
+
+  <div style="padding:44px 60px;background:#e8ebee">
+    <image-slot id="author-photo" shape="rounded" radius="4" placeholder="Drop a photo" style="width:220px;height:220px"></image-slot>
+    <div style="margin-top:24px">
+      <div style="font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:14px">About</div>
+      <p style="margin:0;font:400 17px/1.66 'Spectral',Georgia,serif;color:#2b2b2b">Author: Lee Szu Yi<br><br>Dedicated between the architecture design and environmental research — the public life of cities, human thermal comfort, and LiDAR analysis of the urban environment.</p>
     </div>
   </div>
 
@@ -39,130 +67,151 @@
       <span>Featured Work</span><span>01 / 10</span>
     </div>
     <a href="Fu Cheng.dc.html" style="display:block">
-      <h1 style="margin:16px 0 6px;font:400 66px/1.02 'EB Garamond',Georgia,serif;letter-spacing:-.015em">Fu Cheng</h1>
-      <div style="font:italic 400 23px/1.3 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.62);margin-bottom:26px">A public ground for downtown Tainan</div>
-      <img src="proj/fucheng/2.jpg" alt="Fu Cheng plaza perspective" style="width:100%;height:452px;object-fit:cover">
+      <h1 style="margin:16px 0 6px;font:400 66px/1.02 'Spectral',Georgia,serif;letter-spacing:-.015em">Fu Cheng</h1>
+      <div style="font:italic 400 23px/1.3 'Spectral',Georgia,serif;color:rgba(20,20,20,.62);margin-bottom:26px">A public ground for downtown Tainan</div>
+      <img src="proj/fucheng/2.jpg" alt="Fu Cheng plaza perspective" style="width:100%;height:auto;display:block">
     </a>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(20,20,20,.55)">
       <span>Urban Design — Public Realm</span><span>Tainan · 2023–24</span>
     </div>
-    <p style="max-width:720px;margin:22px 0 0;font:400 16.5px/1.68 'EB Garamond',Georgia,serif;color:#2b2b2b">Fu Cheng reweaves the fragmented heart of downtown Tainan — the canal, the civic quarter and the commercial grid around Zhongzheng Road — into one continuous public ground. Water-treatment infrastructure is folded underground and a soft, day-and-night landscape returns a shared civic plaza to the old provincial capital.</p>
+    <p style="max-width:720px;margin:22px 0 0;font:400 16.5px/1.68 'Spectral',Georgia,serif;color:#2b2b2b">Fu Cheng reweaves the fragmented heart of downtown Tainan — the canal, the civic quarter and the commercial grid around Zhongzheng Road — into one continuous public ground. Water-treatment infrastructure is folded underground and a soft, day-and-night landscape returns a shared civic plaza to the old provincial capital.</p>
     <a href="Fu Cheng.dc.html" style="display:inline-block;margin-top:20px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid rgba(20,20,20,.4);padding-bottom:3px">View Project →</a>
   </div>
 
   <div style="padding:14px 60px 56px">
     <div style="font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);padding-bottom:22px">Index — Selected Projects</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:46px;row-gap:50px">
-
-      <a href="Nonsaturated Democracy.dc.html" style="display:block">
-        <img src="proj/cks/1.jpg" alt="A Vision for Transforming Chiang Kai-shek Memorial Park" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">02</span>Nonsaturated Democracy</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">CKS Memorial Park · Urban Speculation</div>
-      </a>
-
-      <a href="Hybrid.dc.html" style="display:block">
-        <img src="proj/hybrid/1.jpg" alt="Hybrid" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">03</span>Hybrid</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Mixed-Use Collective Housing</div>
-      </a>
-
-      <a href="Inside Out.dc.html" style="display:block">
-        <img src="proj/insideout/1.jpg" alt="Inside Out" style="width:100%;height:310px;object-fit:cover;object-position:left center">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">04</span>Inside Out</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Perceptual Space</div>
-      </a>
-
-      <a href="Level-Up.dc.html" style="display:block">
-        <img src="proj/levelup/1.jpg" alt="Level-Up" style="width:100%;height:310px;object-fit:cover;object-position:left center">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">05</span>Level-Up</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Post-Pandemic Play Space</div>
-      </a>
-
-      <a href="Membrane.dc.html" style="display:block">
-        <img src="proj/membrane/1.jpg" alt="Membrane" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">06</span>Membrane</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Light &amp; Structure</div>
-      </a>
-
-      <a href="Muse.dc.html" style="display:block">
-        <img src="proj/muse/1.jpg" alt="Muse" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">07</span>Muse</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Material Tectonics</div>
-      </a>
-
-      <a href="Railway Underground.dc.html" style="display:block">
-        <img src="proj/railway/1.png" alt="Railway Underground" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">08</span>Railway Underground</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Urban Research</div>
-      </a>
-
-      <a href="Hexa Kura.dc.html" style="display:block">
-        <img src="proj/sss/1.jpg" alt="SSS Workshop — Hexa Kura" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">09</span>Hexa Kura</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">SSS Workshop · Tokyo</div>
-      </a>
-
-      <a href="Overture.dc.html" style="display:block">
-        <img src="proj/triennial/1.jpg" alt="Tainan Architectural Triennial — Overture" style="width:100%;height:310px;object-fit:cover">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
-          <div style="font:400 25px/1.1 'EB Garamond',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">10</span>Overture</div>
-        </div>
-        <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Tainan Architectural Triennial · 2022</div>
-      </a>
-
+    <div ref="{{ gridRef }}" style="display:flex;flex-wrap:wrap;gap:7px;align-items:flex-start">
+      <sc-for list="{{ items }}" as="c" hint-placeholder-count="9">
+        <a href="{{ c.href }}" style="display:flex;flex-direction:column;width:{{ c.width }}px;flex-shrink:0">
+          <img data-src="{{ c.src }}" alt="{{ c.alt }}" style="width:100%;height:{{ c.height }}px;object-fit:cover;display:block;background:{{ c.bg }}">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:15px">
+            <div style="font:400 25px/1.1 'Spectral',Georgia,serif"><span style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.1em;color:rgba(20,20,20,.4);margin-right:10px;vertical-align:middle">{{ c.badge }}</span>{{ c.title }}</div>
+          </div>
+          <div style="margin-top:5px;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">{{ c.subtitle }}</div>
+        </a>
+      </sc-for>
     </div>
   </div>
 
-  <div id="about" style="padding:52px 60px;border-top:1px solid rgba(20,20,20,.13);background:#faf9f6;display:grid;grid-template-columns:300px 1fr;column-gap:56px">
+  <a href="More.dc.html" style="display:block;position:relative;width:100%;height:520px;overflow:hidden">
+    <img src="proj/more/1.jpg" alt="More work" style="width:100%;height:100%;object-fit:cover;object-position:center 78%;filter:grayscale(.3) brightness(.4)">
+    <div style="position:absolute;inset:0;background:rgba(10,10,10,.35);display:flex;align-items:center;justify-content:center">
+      <div style="font:400 32px/1 'Spectral',Georgia,serif;letter-spacing:.08em;color:#fff">MORE</div>
+    </div>
+  </a>
+
+  <div id="about" style="padding:52px 60px;background:#e8ebee;display:grid;grid-template-columns:300px 1fr;column-gap:56px">
     <div style="font:600 10px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">About / CV</div>
     <div>
-      <p style="max-width:660px;margin:0 0 30px;font:400 17px/1.66 'EB Garamond',Georgia,serif;color:#2b2b2b">Master's student at the Building &amp; Climate Lab, Department of Architecture, National Cheng Kung University. My work moves between the architecture design and environmental research — the public life of cities, human thermal comfort, and LiDAR analysis of the urban environment.</p>
       <div style="display:flex;flex-direction:column;gap:16px">
         <div style="display:grid;grid-template-columns:150px 1fr;gap:14px;padding-bottom:16px;border-bottom:1px solid rgba(20,20,20,.1)">
           <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Education</div>
-          <div style="font:400 15.5px/1.6 'EB Garamond',Georgia,serif">M.S. Sustainability &amp; Environmental Control, NCKU · 2024–now<br>Exchange, National University of Singapore · 2023<br>B.S. Architecture, NCKU · 2020–2024</div>
+          <div style="font:400 15.5px/1.6 'Spectral',Georgia,serif">M.S. Sustainability &amp; Environmental Control, NCKU · 2024–now<br>Exchange, National University of Singapore · 2023<br>B.S. Architecture, NCKU · 2020–2024</div>
         </div>
         <div style="display:grid;grid-template-columns:150px 1fr;gap:14px;padding-bottom:16px;border-bottom:1px solid rgba(20,20,20,.1)">
           <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Awards</div>
-          <div style="font:400 15.5px/1.6 'EB Garamond',Georgia,serif">Silver Award, Asia Young Designer Awards — Glocal Design Solutions · 2024<br>Outstanding Award, SSS Structural Workshop, Tokyo · 2023<br>First Prize, CHUR Challenge — Real Estate Management Innovation · 2023<br>Shortlisted, Heart of the Capital — Chiang Kai-shek Memorial Park · 2022<br>Distinction Award, New Taipei City Architects Association Student Design Competition · 2022</div>
+          <div style="font:400 15.5px/1.6 'Spectral',Georgia,serif">Silver Award, Asia Young Designer Awards — Glocal Design Solutions · 2024<br>Outstanding Award, SSS Structural Workshop, Tokyo · 2023<br>First Prize, CHUR Challenge — Real Estate Management Innovation · 2023<br>Shortlisted, Heart of the Capital — Chiang Kai-shek Memorial Park · 2022<br>Distinction Award, New Taipei City Architects Association Student Design Competition · 2022</div>
         </div>
         <div style="display:grid;grid-template-columns:150px 1fr;gap:14px;padding-bottom:16px;border-bottom:1px solid rgba(20,20,20,.1)">
           <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Exhibitions</div>
-          <div style="font:400 15.5px/1.6 'EB Garamond',Georgia,serif">19th Venice Architecture Biennale, Taiwan Pavilion · 2024–25<br>Tainan Architectural Triennial · 2022</div>
+          <div style="font:400 15.5px/1.6 'Spectral',Georgia,serif">19th Venice Architecture Biennale, Taiwan Pavilion · 2024–25<br>Tainan Architectural Triennial · 2022</div>
         </div>
         <div style="display:grid;grid-template-columns:150px 1fr;gap:14px;padding-bottom:16px;border-bottom:1px solid rgba(20,20,20,.1)">
           <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Skills</div>
-          <div style="font:400 15.5px/1.6 'EB Garamond',Georgia,serif">Rhino · Grasshopper · Blender · AutoCAD · D5 · Enscape · Adobe CC · QGIS / ArcGIS Pro · Python · LiDAR / Point Cloud</div>
+          <div style="font:400 15.5px/1.6 'Spectral',Georgia,serif">Rhino · Grasshopper · Blender · AutoCAD · D5 · Enscape · Adobe CC · QGIS / ArcGIS Pro · Python · LiDAR / Point Cloud</div>
         </div>
         <div style="display:grid;grid-template-columns:150px 1fr;gap:14px">
           <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">Contact</div>
-          <div style="font:400 15.5px/1.6 'EB Garamond',Georgia,serif">sunny12345330@gmail.com · (+886) 985 204 657</div>
+          <div style="font:400 15.5px/1.6 'Spectral',Georgia,serif">sunny12345330@gmail.com</div>
         </div>
       </div>
     </div>
   </div>
 
-  <div style="display:flex;justify-content:space-between;padding:26px 60px;border-top:1px solid rgba(20,20,20,.13);font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">
+  <div style="display:flex;justify-content:space-between;padding:26px 60px;background:#e8ebee;font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.5)">
     <span>Sunny Lee — Architecture Portfolio</span><span>© 2026</span>
   </div>
 
 </div>
+
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+function justifyRows(images, containerWidth, targetHeight, gap) {
+  if (!containerWidth || !images || !images.length) return [];
+  const out = [];
+  let row = [];
+  let rowAr = 0;
+  const flush = (height) => { row.forEach(it => out.push({ ...it, width: Math.floor(it.ar * height), height })); };
+  images.forEach((img, idx) => {
+    const ar = (img.w && img.h) ? img.w / img.h : 1.5;
+    row.push({ ...img, idx, ar });
+    rowAr += ar;
+    const widthAtTarget = rowAr * targetHeight + (row.length - 1) * gap;
+    if (widthAtTarget >= containerWidth) {
+      flush((containerWidth - (row.length - 1) * gap) / rowAr);
+      row = []; rowAr = 0;
+    }
+  });
+  if (row.length) {
+    const widths = row.map(it => it.ar * targetHeight);
+    const naturalTotal = widths.reduce((a, b) => a + b, 0);
+    const scale = (containerWidth - (row.length - 1) * gap) / naturalTotal;
+    row.forEach((it, i) => out.push({ ...it, width: Math.floor(widths[i] * scale), height: targetHeight }));
+  }
+  return out;
+}
+class Component extends DCLogic {
+  covers = [
+    { href:'Democratize.exe.dc.html', src:'proj/cks/1.jpg', alt:'Democratize.exe — a vision for transforming Chiang Kai-shek Memorial Park', badge:'02', title:'Democratize.exe', subtitle:'CKS Memorial Park · Urban Speculation', w:2385, h:1685, bg:'#eee' },
+    { href:'Hybrid.dc.html', src:'proj/hybrid/1.jpg', alt:'Hybrid', badge:'03', title:'Hybrid', subtitle:'Mixed-Use Collective Housing', w:1567, h:1045, bg:'#eee' },
+    { href:'Inside Out.dc.html', src:'proj/insideout/1.jpg', alt:'Inside Out', badge:'04', title:'Inside Out', subtitle:'Perceptual Space', w:5612, h:1417, bg:'#eee' },
+    { href:'Level-Up.dc.html', src:'proj/levelup/1.jpg', alt:'Level-Up', badge:'05', title:'Level-Up', subtitle:'Post-Pandemic Play Space', w:2048, h:1446, bg:'#eee' },
+    { href:'Membrane.dc.html', src:'proj/membrane/1.jpg', alt:'Membrane', badge:'06', title:'Membrane', subtitle:'Light & Structure', w:6000, h:4000, bg:'#000' },
+    { href:'Railway Underground.dc.html', src:'proj/railway/1.png', alt:'Railway Underground', badge:'07', title:'Railway Underground', subtitle:'Urban Research', w:2475, h:2475, bg:'#fff' },
+    { href:'Hexa Kura.dc.html', src:'proj/sss/1.jpg', alt:'SSS Workshop — Hexa Kura', badge:'08', title:'Hexa Kura', subtitle:'SSS Workshop · Tokyo', w:1541, h:1063, bg:'#000' },
+    { href:'Overture.dc.html', src:'proj/triennial/1.jpg', alt:'Tainan Architectural Triennial — Overture', badge:'09', title:'Overture', subtitle:'Tainan Architectural Triennial · 2022', w:6079, h:2605, bg:'#eee' },
+    { href:'Climate Justice.dc.html', src:'proj/venice/1.jpg', alt:'Climate Justice — Taiwan Pavilion', badge:'10', title:'Climate Justice', subtitle:'Venice Architecture Biennale · 2024–25', w:5568, h:3712, bg:'#eee' }
+  ];
+  state = { items: justifyRows(this.covers, (typeof window !== 'undefined' ? window.innerWidth : 1600) - 120, 310, 7) };
+  gridRef = React.createRef();
+  rootRef = React.createRef();
+  videoRef = React.createRef();
+  hydrateImgs = () => {
+    const root = this.rootRef.current;
+    if (!root) return;
+    root.querySelectorAll('img[data-src]').forEach(img => {
+      const want = img.getAttribute('data-src');
+      if (want && img.getAttribute('src') !== want) img.setAttribute('src', want);
+    });
+  };
+  computeRows = () => {
+    if (!this.gridRef.current) return;
+    const width = this.gridRef.current.clientWidth;
+    const items = justifyRows(this.covers, width, 310, 7);
+    this.setState({ items });
+  };
+  componentDidMount() {
+    this.computeRows();
+    window.addEventListener('resize', this.computeRows);
+    this.hydrateImgs();
+    const v = this.videoRef.current;
+    if (v) {
+      v.muted = true;
+      v.loop = true;
+      v.play().catch(() => {});
+    }
+  }
+  componentDidUpdate() {
+    this.hydrateImgs();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.computeRows);
+  }
+  renderVals() {
+    return { items: this.state.items, gridRef: this.gridRef, rootRef: this.rootRef, videoRef: this.videoRef };
+  }
+}
+
+</script>
 </body>
 </html>

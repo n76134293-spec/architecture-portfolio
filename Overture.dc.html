@@ -10,55 +10,60 @@
 <helmet data-dc-atomics>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
-  body{margin:0;background:#fcfbf9;font-family:'EB Garamond',Georgia,serif;color:#141414}
+  body{margin:0;background:#fbfcfd;font-family:'Spectral',Georgia,serif;color:#141414}
   a{color:#141414;text-decoration:none}
   a:hover{color:#000}
   img{display:block;max-width:100%}
+
+html,body{overflow-x:hidden}
+@media(max-width:700px){
+[style*="padding:0 60px 100px"]{padding-left:16px!important;padding-right:16px!important}
+h1{font-size:clamp(30px,8vw,44px)!important;line-height:1.07!important}
+[style*="gap:30px"]{flex-wrap:wrap!important;gap:14px!important}
+[data-screen-label] img{background-position:center!important}
+}
 </style>
 </helmet>
 
-<div data-screen-label="Overture — project page" style="max-width:900px;margin:0 auto;padding:0 40px 100px">
+<div data-screen-label="Overture — project page" ref="{{ rootRef }}" style="padding:0 60px 100px">
 
   <div style="display:flex;justify-content:space-between;align-items:center;padding:30px 0 26px;border-bottom:1px solid rgba(20,20,20,.13)">
     <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">← Index</a>
-    <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">10 / 10</div>
+    <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5)">09 / 10</div>
   </div>
 
   <div style="padding:56px 0 30px">
     <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:16px">Tainan Architectural Triennial</div>
-    <h1 style="margin:0;font:400 78px/1.02 'EB Garamond',Georgia,serif;letter-spacing:-.015em">Overture</h1>
-    <div style="display:flex;gap:30px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(20,20,20,.13);font:400 15px/1.5 'EB Garamond',Georgia,serif;color:#333">
+    <h1 style="margin:0;font:400 78px/1.02 'Spectral',Georgia,serif;letter-spacing:-.015em">Overture</h1>
+    <div style="display:flex;gap:30px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(20,20,20,.13);font:400 15px/1.5 'Spectral',Georgia,serif;color:#333">
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Site</span>Tainan, Taiwan</div>
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Year</span>2022</div>
       <div><span style="display:block;font:600 9.5px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,20,20,.45);margin-bottom:4px">Role</span>Exhibition design</div>
     </div>
   </div>
 
-  <img src="proj/triennial/1.jpg" alt="Overture hero" style="width:100%;height:480px;object-fit:cover">
+  <img src="proj/triennial/1.jpg" alt="Overture hero" style="width:100%;height:auto;display:block">
 
   <div style="padding:56px 0 10px">
     <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px">
       <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Concept</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — the exhibition's premise for the Tainan Architectural Triennial.</p>
+      <p style="margin:0 0 20px;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">In this exhibition, I am very honored to be the chairman of the students and lead all the students to hold this event. The exhibition was held in "THE SPRING", an international plaza designed by MVRDV. Almost the work of the whole year were exhibited, and I was fortunate to participate in all the projects from management, design, and execution. Feel very grateful to NCKU and Public Works Department for providing an opportunity for me to have this valuable practical experience.</p>
+      <p style="margin:0 0 20px;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">The participants in this exhibition include the first-year, second- and fourth-year students of the architecture department of NCKU, and the M.Arch II students at the research institute. The curatorial plan is led by the second-year students (113 grade) to form a team and make the main design. Regardless of the covid-19 and the online stuff, we still plan to exhibit in a physical form, hoping to store images, ideals, and concepts in our minds through the structure of real existence.</p>
+      <p style="margin:0 0 20px;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">The preparation for the exhibition was intensively discussed during the curatorial period from the end of April to mid-June and experienced more than ten meetings with classmates and teachers. In the early stage of preparation, the person in charge communicated with the teachers and students and discussed with the team members the details of the exhibition frame design, exhibition moving line, and main visual posters. During the process, meetings were held to modify the drawings and construction methods, and teachers and senior sisters were asked to assist and improve. In the later period, they participated in the physical exhibition installation process with other grades, and finally, the exhibition was successfully completed together.</p>
+      <p style="margin:0 0 20px;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">Under the tight schedule, it is not easy for us to take care of the planning and preparation work for the first physical exhibition. In addition to taking design classes and exams into consideration, the students also use their spare time to continuously try out, discuss and adjust the finalization. This curation is undoubtedly a practical opportunity to test students' abilities, give full play to their strengths, and learn to cooperate with students across grades.</p>
+      <p style="margin:0;font:400 17px/1.75 'Spectral',Georgia,serif;color:#2b2b2b">Thanks to many teachers, senior sisters, juniors, and sophomores for their active participation. I hope that in the life of co-existing with the epidemic, we can seize the opportunity to present the best physical exhibition effect to the citizens in an international exhibition venue.</p>
     </div>
-    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px;margin-top:34px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Design Development</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — how the installation and exhibition sequence was designed.</p>
-    </div>
-    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:16px;margin-top:34px">
-      <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:10px">Outcome</div>
-      <p style="margin:0;font:italic 400 17px/1.7 'EB Garamond',Georgia,serif;color:rgba(20,20,20,.4)">Add your project text here — how visitors experienced Overture.</p>
-    </div>
+    <div style="border-top:1px dashed rgba(20,20,20,.28);padding-top:14px;margin-top:30px;font:400 13.5px/1.6 'Spectral',Georgia,serif;color:rgba(20,20,20,.55)">文章撰寫 Writing: 李思誼　·　展覽論述 Curatorial statement: 苗育瑄　·　攝影 Photography: 曾譯賢、曾邑禾、徐敬恩　·　網站 Website: overture2022nckuarch.com</div>
   </div>
 
   <div style="padding-top:56px">
     <div style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,20,20,.5);margin-bottom:20px">Full Gallery — {{ total }} images · click to enlarge</div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
-      <sc-for list="{{ images }}" as="photo" hint-placeholder-count="8">
-        <img src="{{ photo.src }}" alt="{{ photo.alt }}" data-index="{{ $index }}" onClick="{{ openAt }}" style="width:100%;height:300px;object-fit:cover;cursor:zoom-in;background:#eee">
+    <div ref="{{ galleryRef }}" style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ items }}" as="photo" hint-placeholder-count="9">
+        <img data-src="{{ photo.src }}" alt="{{ photo.alt }}" data-index="{{ photo.idx }}" onClick="{{ openAt }}" style="height:{{ photo.height }}px;width:{{ photo.width }}px;object-fit:cover;cursor:zoom-in;background:{{ photo.bg }}">
       </sc-for>
     </div>
   </div>
@@ -67,40 +72,78 @@
     <div onClick="{{ close }}" onTouchStart="{{ onTouchStart }}" onTouchEnd="{{ onTouchEnd }}" style="position:fixed;inset:0;background:rgba(10,10,10,.95);z-index:999;display:flex;align-items:center;justify-content:center">
       <button onClick="{{ close }}" style="position:absolute;top:22px;right:26px;background:none;border:none;color:#fff;font:300 30px/1 'Helvetica Neue',Arial,sans-serif;cursor:pointer">✕</button>
       <button onClick="{{ prev }}" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font:300 48px/1 Georgia,serif;cursor:pointer;padding:10px">‹</button>
-      <img src="{{ currentSrc }}" alt="{{ currentAlt }}" onClick="{{ stop }}" style="max-width:86vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+      <img data-src="{{ currentSrc }}" alt="{{ currentAlt }}" onClick="{{ stop }}" style="max-width:86vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.5)">
       <button onClick="{{ next }}" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font:300 48px/1 Georgia,serif;cursor:pointer;padding:10px">›</button>
       <div style="position:absolute;bottom:26px;left:0;right:0;text-align:center;color:rgba(255,255,255,.7);font:400 12px 'IBM Plex Mono',ui-monospace,monospace;letter-spacing:.08em">{{ counter }}</div>
     </div>
   </sc-if>
 
   <div style="display:flex;justify-content:space-between;align-items:center;padding:56px 0 0;margin-top:56px;border-top:1px solid rgba(20,20,20,.13)">
-    <a href="Hexa Kura.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">← 09 · Hexa Kura</a>
+    <a href="Hexa Kura.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">← 08 · Hexa Kura</a>
     <a href="Home.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase">Index</a>
-    <a href="Fu Cheng.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">01 · Fu Cheng →</a>
+    <a href="Climate Justice.dc.html" style="font:600 10px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.5)">10 · Climate Justice →</a>
   </div>
 
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+function justifyRows(images, containerWidth, targetHeight, gap) {
+  if (!containerWidth || !images || !images.length) return [];
+  const out = [];
+  let row = [];
+  let rowAr = 0;
+  const flush = (height) => { row.forEach(it => out.push({ ...it, width: Math.floor(it.ar * height), height })); };
+  images.forEach((img, idx) => {
+    const ar = (img.w && img.h) ? img.w / img.h : 1.5;
+    row.push({ ...img, idx, ar });
+    rowAr += ar;
+    const widthAtTarget = rowAr * targetHeight + (row.length - 1) * gap;
+    if (widthAtTarget >= containerWidth) {
+      flush((containerWidth - (row.length - 1) * gap) / rowAr);
+      row = []; rowAr = 0;
+    }
+  });
+  if (row.length) {
+    flush((containerWidth - (row.length - 1) * gap) / rowAr);
+  }
+  return out;
+}
 class Component extends DCLogic {
   images = [
-    {src:'proj/triennial/1.jpg', alt:'Overture — 1'},
-    {src:'proj/triennial/2.jpg', alt:'Overture — 2'},
-    {src:'proj/triennial/3.jpg', alt:'Overture — 3'},
-    {src:'proj/triennial/4.jpg', alt:'Overture — 4'},
-    {src:'proj/triennial/5.jpg', alt:'Overture — 5'},
-    {src:'proj/triennial/6.jpg', alt:'Overture — 6'},
-    {src:'proj/triennial/7.jpg', alt:'Overture — 7'},
-    {src:'proj/triennial/8.jpg', alt:'Overture — 8'},
-    {src:'proj/triennial/9.jpg', alt:'Overture — 9'},
-    {src:'proj/triennial/10.jpg', alt:'Overture — 10'},
-    {src:'proj/triennial/11.jpg', alt:'Overture — 11'},
-    {src:'proj/triennial/12.jpg', alt:'Overture — 12'},
-    {src:'proj/triennial/13.jpg', alt:'Overture — 13'},
-    {src:'proj/triennial/14.jpg', alt:'Overture — 14'}
+    {src:'proj/triennial/1.jpg', alt:'Overture — 1', w:6079, h:2605},
+    {src:'proj/triennial/2.jpg', alt:'Overture — 2', w:4928, h:3264},
+    {src:'proj/triennial/3.jpg', alt:'Overture — 3', w:4928, h:3264},
+    {src:'proj/triennial/4.jpg', alt:'Overture — 4', w:4448, h:2946},
+    {src:'proj/triennial/5.jpg', alt:'Overture — 5', w:4333, h:2870},
+    {src:'proj/triennial/6.jpg', alt:'Overture — 6', w:4923, h:3261},
+    {src:'proj/triennial/7.jpg', alt:'Overture — 7', w:4512, h:3000},
+    {src:'proj/triennial/8.jpg', alt:'Overture — 8', w:4512, h:3000},
+    {src:'proj/triennial/9.jpg', alt:'Overture — 9', w:4992, h:3328},
+    {src:'proj/triennial/10.jpg', alt:'Overture — 10', w:4992, h:3328},
+    {src:'proj/triennial/11.jpg', alt:'Overture — 11', w:4992, h:3328},
+    {src:'proj/triennial/12.jpg', alt:'Overture — 12', w:4992, h:3328},
+    {src:'proj/triennial/13.jpg', alt:'Overture — 13', w:4726, h:11812},
+    {src:'proj/triennial/14.jpg', alt:'Overture — 14', w:4726, h:11812}
   ];
-  state = { open: false, index: 0 };
+  state = { open: false, index: 0, items: justifyRows(this.images.map(p => ({ ...p, bg: '#eee' })), (typeof window !== 'undefined' ? window.innerWidth : 1600) - 120, 300, 8) };
   touchX = null;
+  galleryRef = React.createRef();
+  rootRef = React.createRef();
+  hydrateImgs = () => {
+    const root = this.rootRef.current;
+    if (!root) return;
+    root.querySelectorAll('img[data-src]').forEach(img => {
+      const want = img.getAttribute('data-src');
+      if (want && img.getAttribute('src') !== want) img.setAttribute('src', want);
+    });
+  };
+  computeRows = () => {
+    if (!this.galleryRef.current) return;
+    const width = this.galleryRef.current.clientWidth;
+    const withBg = this.images.map(p => ({ ...p, bg: '#eee' }));
+    const items = justifyRows(withBg, width, 300, 8);
+    this.setState({ items });
+  };
   openAt = (e) => { this.setState({ open: true, index: parseInt(e.currentTarget.dataset.index, 10) }); };
   close = () => this.setState({ open: false });
   stop = (e) => e.stopPropagation();
@@ -119,13 +162,24 @@ class Component extends DCLogic {
     if (dx > 50) this.prev(); else if (dx < -50) this.next();
     this.touchX = null;
   };
-  componentDidMount() { window.addEventListener('keydown', this.handleKey); }
-  componentWillUnmount() { window.removeEventListener('keydown', this.handleKey); }
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleKey);
+    this.computeRows();
+    window.addEventListener('resize', this.computeRows);
+    this.hydrateImgs();
+  }
+  componentDidUpdate() {
+    this.hydrateImgs();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKey);
+    window.removeEventListener('resize', this.computeRows);
+  }
   renderVals() {
     const total = this.images.length;
     const cur = this.images[this.state.index] || this.images[0];
     return {
-      images: this.images, total, open: this.state.open,
+      items: this.state.items, galleryRef: this.galleryRef, rootRef: this.rootRef, total, open: this.state.open,
       openAt: this.openAt, close: this.close, stop: this.stop, next: this.next, prev: this.prev,
       onTouchStart: this.onTouchStart, onTouchEnd: this.onTouchEnd,
       currentSrc: cur.src, currentAlt: cur.alt,
